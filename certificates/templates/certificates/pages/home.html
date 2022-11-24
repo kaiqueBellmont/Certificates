@@ -1,0 +1,13 @@
+{% extends 'global/base.html' %}
+
+{% block content %}
+<div class="main-content main-content-list container">
+    {% for certificate in certificates %}
+        {% include 'certificates/partials/certificate.html' %}
+    {% empty %}
+    <div class="center m-y">
+        <h1>No certificates found here (yet) 🥲</h1>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

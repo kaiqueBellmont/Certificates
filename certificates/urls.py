@@ -1,7 +1,9 @@
 from django.urls import path
-from certificates.views import home
+from . import views
 
+app_name = 'certificates'
 
 urlpatterns = [
-    path('', home)
+    path('', views.home, name="home"),
+    path('certificates/<int:id>/', views.certificate, name="certificate"),
 ]
