@@ -1,6 +1,6 @@
 <div class="search-container">
     <div class="container">
-        <form method="GET" class="search-form">
+        <form action="{% url 'certificates:search' %}" method="GET" class="search-form">
             <label>
                 <input
                         type="search" class="search-input"
